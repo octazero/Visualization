@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>cereal</id>
+    <version>1.0.0</version>
+    <title>cereal</title>
+    <authors>USCiLab</authors>
+    <owners>USCiLab</owners>
+    <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+    <projectUrl>http://uscilab.github.io/cereal/</projectUrl>
+    <iconUrl>http://uscilab.github.io/cereal/assets/img/cerealboxside.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>cereal is a header-only C++11 serialization library. cereal takes arbitrary data types and reversibly turns them into different representations, such as compact binary encodings, XML, or JSON. cereal was designed to be fast, light-weight, and easy to extend - it has no external dependencies and can be easily bundled with other code or used standalone.</description>
+    <summary>A C++11 library for serialization</summary>
+    <releaseNotes>This is a major feature release for cereal. Notable changes include:
+
+- Support for Visual Studio 2013 (#11)
+- Support for out of order loading in text (XML/JSON) archives (#13, #14)
+- Full API compatibility with Boost serialization (#8)
+- Support for class versioning (#8)
+- New API for types with no default constructor (#43, #44, #59)
+- New minimal serialization functions (#23)
+- Compliance with the compiler flags -Wextra, -Wshadow, and -pedantic (#17)
+- Fixes related to libc++ compliance, especially on OSX (#49, #51, #72)
+- Support for std::enable_shared_from_this (cereal hall of fame for most annoying standard library feature to support) (#47)
+- Miscellaneous bug fixes, documentation updates, small improvements, and code refactoring
+
+See the closed issues for more information.
+
+cereal is not designed to be inherently backwards compatible across significant releases. There are a few changes in this release that may break some existing use cases:
+
+- The constructors for XML and JSON archives accept options in a different manner (#64)
+- Types with no default constructor have a new API and new names for required functions
+- Some built in types may have had their serialization format changed, especially in regards to text archives using name-value-pairs.
+- Enums use the new minimal serialization (#23)
+- JSON archives now serialize large types in base 10 instead of base 64 (#72)
+
+https://github.com/USCiLab/cereal/releases/tag/v1.0.0</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>serialization serialize xml json native nativepackage</tags>
+  </metadata>
+</package>
